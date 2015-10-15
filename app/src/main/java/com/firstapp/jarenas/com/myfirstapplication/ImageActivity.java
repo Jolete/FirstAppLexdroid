@@ -1,8 +1,8 @@
 package com.firstapp.jarenas.com.myfirstapplication;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,10 +32,10 @@ public class ImageActivity extends AppCompatActivity implements View.OnClickList
 
         boto1 = (Button) findViewById(R.id.boto1);
         boto2 = (Button) findViewById(R.id.boto2);
-        forwardButton  = (Button) findViewById(R.id.zoomBack);
+        forwardButton = (Button) findViewById(R.id.zoomBack);
         faceButton = (Button) findViewById(R.id.fadeBack);
         rightButton = (Button) findViewById(R.id.rightBack);
-        backButton= (Button) findViewById(R.id.back);
+        backButton = (Button) findViewById(R.id.back);
 
         imatge = (ImageView) findViewById(R.id.imatge);
         textBox = (TextView) findViewById(R.id.nom);
@@ -95,12 +95,10 @@ public class ImageActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private void canviarText()
-    {
+    private void canviarText() {
         if (canviText) {
             textBox.setText("Jordi");
-        }
-        else {
+        } else {
             textBox.setText("Arnau");
         }
 
@@ -110,8 +108,7 @@ public class ImageActivity extends AppCompatActivity implements View.OnClickList
     private void canviarImatge() {
         if (canviImatge) {
             imatge.setImageResource(R.drawable.bmw);
-        }
-        else {
+        } else {
             imatge.setImageResource(R.drawable.burger);
         }
         canviImatge = !canviImatge;
@@ -120,32 +117,27 @@ public class ImageActivity extends AppCompatActivity implements View.OnClickList
     ///
     /// Bloc de transicions
     ///
-    public void explode(View button)
-    {
+    public void explode(View button) {
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.explode_transition, R.anim.explode_transition);
     }
 
-    public void zoomBack(View button)
-    {
+    public void zoomBack(View button) {
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.zoom_forward_in, R.anim.zoom_forward_out);
     }
 
-    public void fade(View button)
-    {
+    public void fade(View button) {
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
-    public void right(View button)
-    {
+    public void right(View button) {
         startActivity(new Intent(this, MainActivity.class));
         overridePendingTransition(R.anim.right_in, R.anim.right_out);
     }
 
-    public void back(View button)
-    {
+    public void back(View button) {
         super.onBackPressed();
     }
 }

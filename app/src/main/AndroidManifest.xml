@@ -4,6 +4,7 @@
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
     <!--
  To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
      option is required to comply with the Google+ Sign-In developer policies
@@ -38,7 +39,7 @@
         </activity>
         <activity
             android:name=".ImageActivity"
-            android:label="@string/title_activity_image" >
+            android:label="@string/title_activity_image">
         </activity>
         <activity
             android:name=".WebViewActivity"
@@ -47,6 +48,10 @@
         <activity
             android:name=".SensorActivity"
             android:label="@string/title_activity_sensor" >
+        </activity>
+        <activity
+            android:name=".ScrollerImageActivity"
+            android:label="@string/title_activity_scroller_image" >
         </activity>
     </application>
 

@@ -16,4 +16,9 @@
     <string name="title_activity_web_view">WebViewActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_sensor">SensorActivity</string>
+
+    <string name="img">Imagen de la actividad</string>
+    <string name="title_activity_scroller_image">ScrollerImageActivity</string>
+
+
 </resources>

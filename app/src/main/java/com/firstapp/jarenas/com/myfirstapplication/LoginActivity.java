@@ -91,31 +91,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     ///
     /// Bloc de transicions
     ///
-    public void explode(View button)
-    {
+    public void explode(View button) {
         startActivity(new Intent(this, ImageActivity.class));
         overridePendingTransition(R.anim.explode_transition, R.anim.explode_transition);
     }
 
-    public void fowardZoom(View button)
-    {
+    public void fowardZoom(View button) {
         startActivity(new Intent(this, ImageActivity.class));
         overridePendingTransition(R.anim.zoom_forward_in, R.anim.zoom_forward_out);
     }
 
-    public void left(View button)
-    {
+    public void left(View button) {
         startActivity(new Intent(this, ImageActivity.class));
         overridePendingTransition(R.anim.left_in, R.anim.left_out);
     }
-    public void fade(View button)
-    {
+
+    public void fade(View button) {
         startActivity(new Intent(this, ImageActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 
-    public void byDefault(View button)
-    {
+    public void byDefault(View button) {
         startActivity(new Intent(this, ImageActivity.class));
     }
 }

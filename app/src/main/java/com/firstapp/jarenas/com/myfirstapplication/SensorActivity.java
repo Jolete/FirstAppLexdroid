@@ -5,8 +5,8 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,11 +67,9 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         textView.setText(cadena);
         numero = Float.parseFloat(cadena);
 
-        if (numero == 0 )
-        {
+        if (numero == 0) {
             linearLayout.setBackgroundColor(Color.RED);
-        }
-        else {
+        } else {
             linearLayout.setBackgroundColor(Color.BLUE);
         }
     }

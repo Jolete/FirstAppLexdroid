@@ -1,7 +1,7 @@
 package com.firstapp.jarenas.com.myfirstapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -15,7 +15,7 @@ public class WebViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
 
-        webView = (WebView)findViewById(R.id.webView);
+        webView = (WebView) findViewById(R.id.webView);
 
         String url = "http://escuela.it";
         url = "file:///android_asset/index.html";
