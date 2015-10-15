@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyFirstApplication</string>
+
+    <string name="welcome">Bienvenido a la primera app del curso Lexdroid</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_search">Buscar</string>
+    <string name="user">Usuario:</string>
+    <string name="user_placeholder">Your name</string>
+    <string name="password">Password:</string>
+    <string name="password_placeholder">Enter a password</string>
+    <string name="Login">Loginate</string>
+    <string name="title_activity_image">ImageActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_webview">webview</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sensor">SensorActivity</string>
+</resources>
