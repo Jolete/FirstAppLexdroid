@@ -13,6 +13,9 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.math.RoundingMode;
+import java.util.Vector;
+
 public class SensorActivity extends AppCompatActivity implements SensorEventListener {
 
     LinearLayout linearLayout;
@@ -35,7 +38,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
-
+        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -76,6 +79,20 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        linearLayout.setBackgroundColor((int) Lerp(Color.RED, Color.BLUE, accuracy));
+        cadena = String.valueOf(accuracy);
+        textView.setText(cadena);
+        numero = Float.parseFloat(cadena);
+
+        Log.d("valor de accuracy: ","onAccuracyChanged: " + sensor + ", accuracy: " + accuracy);
+
+    }
+
+    private double Lerp(int start, int end, float percent)
+    {
+        float color = start + percent * (end - start);
+
+        return Math.rint(color);
 
     }
 }

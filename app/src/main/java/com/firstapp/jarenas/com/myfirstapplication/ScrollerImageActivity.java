@@ -1,5 +1,7 @@
 package com.firstapp.jarenas.com.myfirstapplication;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -7,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import java.io.IOException;
 
 public class ScrollerImageActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,7 +66,7 @@ public class ScrollerImageActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        int fondoID;
+        int fondoID = R.drawable.b;
 
         switch (view.getId()) {
             case R.id.a1:
@@ -90,13 +94,13 @@ public class ScrollerImageActivity extends AppCompatActivity implements View.OnC
                 fondoID = R.drawable.orgflat;
                 break;
             case R.id.boton:
-                //Bitmap fondo = BitmapFactory.decodeStream(getResources().openRawResource())
-                /*try{
-                    //getApplicationContext().setWallpaper(fondo);
+                Bitmap fondo = BitmapFactory.decodeStream(getResources().openRawResource(fondoID));
 
+                try {
+                    getApplicationContext().setWallpaper(fondo);
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                catch ()
-                {}*/
                 break;
         }
     }
